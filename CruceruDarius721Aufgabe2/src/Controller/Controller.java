@@ -112,4 +112,13 @@ public class Controller {
     public List<Charktere>charaktereVonHerkunfstOrt(String herkunsftOrt){
         return getAllCharkteres().stream().filter(charakter->charakter.getHerkunftsOrt().equals(herkunsftOrt)).collect(Collectors.toList());
     }
+
+    public List<Charktere>charaktereDieEinenProduktVonRegionGekauft(String region){
+        return getAllCharkteres().stream()
+                .filter(charktere -> charktere.getErwobeneProdukte().stream()
+                        .anyMatch(produkt -> produkt.getHerkunftRegion().equals(region)))
+                .collect(Collectors.toList());
+    }
+
+
 }
