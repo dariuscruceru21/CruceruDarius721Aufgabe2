@@ -48,23 +48,26 @@ public class Controller {
         charktereIRepository.create(charktere3);
 
 
-        addProduktToCharaket(1, 2);
-        addProduktToCharaket(1, 3);
-        addProduktToCharaket(4, 1);
-        addProduktToCharaket(2, 3);
+        addProduktToCharaket(1, produkt2);
+        addProduktToCharaket(1, produkt3);
+        addProduktToCharaket(4, produkt1);
+        addProduktToCharaket(2, produkt3);
     }
 
 
     /**
      * Adds a Film to a Client's list of films.
      *
-     * @param produktId  the ID of the Produkt
-     * @param charketrId the ID of the Charakter
+     * @param charaktertId  the ID of the Produkt
+     * @param produkt the ID of the Charakter
      */
-    public void addProduktToCharaket(Integer produktId, Integer charketrId) {
-        Charktere charktere = charktereIRepository.get(charketrId);
-        Produkt produkt = produktIRepository.get(produktId);
-        charktere.getErwobeneProdukte().add(produkt);
+    public void addProduktToCharaket(Integer charaktertId, Produkt produkt) {
+        Charktere charktere = charktereIRepository.get(charaktertId);
+        if(charktere != null) {
+            charktere.getErwobeneProdukte().add(produkt);
+            charktereIRepository.update(charktere);
+        }
+
     }
 
 
