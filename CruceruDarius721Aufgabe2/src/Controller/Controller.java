@@ -121,4 +121,13 @@ public class Controller {
     }
 
 
+    public List<Produkt>sortCharaktereProdukte(Integer charakterId, boolean ascending){
+        Charktere charaktere = charktereIRepository.get(charakterId);
+        if(charaktere==null){
+            return List.of();
+        }
+        return charaktere.getErwobeneProdukte().stream().sorted((p1,p2)->ascending ?
+                p1.getPreis().compareTo(p2.getPreis()):
+                p2.getPreis().compareTo(p2.getPreis())).collect(Collectors.toList());
+    }
 }
