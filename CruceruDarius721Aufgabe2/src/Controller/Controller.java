@@ -71,41 +71,6 @@ public class Controller {
     }
 
 
-    public void addProdukt(Produkt produkt) {
-        produktIRepository.create(produkt);
-    }
-
-    public void addCharakter(Charktere charktere) {
-        charktereIRepository.create(charktere);
-    }
-
-    public void update(Produkt produkt) {
-        produktIRepository.update(produkt);
-    }
-
-    public void uodate(Charktere charktere) {
-        charktereIRepository.update(charktere);
-    }
-
-    public void removeProdukt(Integer produktId) {
-        produktIRepository.delete(produktId);
-    }
-
-    public void removeCharakter(Integer charktereId) {
-        charktereIRepository.delete(charktereId);
-    }
-
-    public Produkt getProduktById(Integer produktId) {
-        return produktIRepository.get(produktId);
-    }
-
-    public Charktere getCharktereById(Integer charktereId) {
-        return charktereIRepository.get(charktereId);
-    }
-
-    public List<Produkt>getAllProdukts() {
-        return produktIRepository.getAll();
-    }
 
     public List<Charktere>getAllCharkteres() {
         return charktereIRepository.getAll();

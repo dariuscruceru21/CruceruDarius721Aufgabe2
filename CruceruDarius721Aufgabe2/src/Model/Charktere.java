@@ -26,33 +26,20 @@ public class Charktere implements HasId{
         this.id = id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getHerkunftsOrt() {
         return herkunftsOrt;
     }
 
-    public void setHerkunftsOrt(String herkunftsOrt) {
-        this.herkunftsOrt = herkunftsOrt;
-    }
+
 
     public List<Produkt> getErwobeneProdukte() {
         return erwobeneProdukte;
     }
 
-    public void setErwobeneProdukte(List<Produkt> erwobeneProdukte) {
-        this.erwobeneProdukte = erwobeneProdukte;
-    }
+
 
     @Override
     public String toString() {

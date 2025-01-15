@@ -23,29 +23,18 @@ public class Produkt implements HasId {
         this.idProdukt = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Double getPreis() {
         return preis;
     }
 
-    public void setPreis(Double preis) {
-        this.preis = preis;
-    }
+
 
     public String getHerkunftRegion() {
         return herkunftRegion;
     }
 
-    public void setHerkunftRegion(String herkunftRegion) {
-        this.herkunftRegion = herkunftRegion;
-    }
+
 
     @Override
     public String toString() {
